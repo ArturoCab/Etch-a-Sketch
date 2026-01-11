@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+}
+
+.container>div{
+    width: 5.88vw;
+    height: 5.88vw;
+}
