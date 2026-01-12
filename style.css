@@ -10,8 +10,8 @@
 }
 
 .container>div{
-    width: calc(800px/17);
-    height: calc(800px/16)px;
+    width: calc(1000px/17);
+    height: calc(1000px/17)px;
 }
 
 body{

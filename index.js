@@ -41,7 +41,7 @@ function fillDivs(size=16){
     if(divs.length>0){
         divs.forEach(element=>{
             container.removeChild(element);
-            console.log("removing element", element);
+            //console.log("removing element", element);
         });
 
         for(; divs.length>0;){
@@ -50,14 +50,20 @@ function fillDivs(size=16){
 
     }
 
-
-
     for(let i=0; i<size*size; i++){
         const d=document.createElement("div");
+        const id=document.createElement("span");
+        id.textContent=i;
+        d.appendChild(id);
         d.style.border="solid 1px black";
         
         d.addEventListener("mouseenter",mouseEnter);
         d.addEventListener("mouseleave",mouseLeave);
+        
+        d.style.width="calc(800px/"+(size>1?size+1:1)+")";
+        if(i==0) console.log("width",d.style.width);
+        d.style.height="calc(800px/"+(size>1?size+1:1)+")";
+        if(i==0) console.log("height",d.style.width);
 
         divs.push(d);
     }
